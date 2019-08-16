@@ -91,7 +91,7 @@ Data is made out of a list of orders:
 * `offreName` Name of the service being ordered.
 * `status` Current status of the order.
 * `icon` URL of the icon representing the service.
-* `mobileWebLink` URL to send this user to link to the details of the order. *Note:* This is the preferred URL to be used in a webview or on the web on mobile phones.
-* `desktopWebLink` URL to send this user to link to the details of the order. *Note:* This is the preferred URL to be used to send the user in a browser, dektop, tablet.
+* `mobileWebLink` URL to send this user to link to the details of the order. **Note:** This is the preferred URL to be used in a webview or on the web on mobile phones.
+* `desktopWebLink` URL to send this user to link to the details of the order. **Note:** This is the preferred URL to be used to send the user in a browser, dektop, tablet.
 * `items` Items being ordered on the service.
 

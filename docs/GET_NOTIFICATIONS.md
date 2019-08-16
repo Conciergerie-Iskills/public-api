@@ -51,6 +51,6 @@ Data is made out of a list of notifications:
 * `acknowledged` Boolean. True if this notifications has already been dismimssed by the user. Note, notifications that are not dismissed comes first in this list. After this split, they are sorted by ascending age (most recent first).
 * `message` Text to be displayed to the user.
 * `date` Date of the notification.
-* `mobileWebLink` URL to send this user to link to the details of the order. *Note:* This is the preferred URL to be used in a webview or on the web on mobile phones.
-* `desktopWebLink` URL to send this user to link to the details of the order. *Note:* This is the preferred URL to be used to send the user in a browser, dektop, tablet.
+* `mobileWebLink` URL to send this user to link to the details of the order. **Note:** This is the preferred URL to be used in a webview or on the web on mobile phones.
+* `desktopWebLink` URL to send this user to link to the details of the order. **Note:** This is the preferred URL to be used to send the user in a browser, dektop, tablet.
 

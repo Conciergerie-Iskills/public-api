@@ -4,7 +4,7 @@
 ## Summary
 Mark specific notifications as "read".
 
-##Request
+## Request
 ```json
 {
   "notificationIds": [12, 35, 90]
