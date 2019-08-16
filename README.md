@@ -1,4 +1,9 @@
 # Iskills Public API, v1.0.0
+
+## Code
+* You can find typescript interfaces of the public API in the `ts` folder of this repository.
+* You can find java classes of the public API in the `java` folder of this repository.
+
 ## Concepts
 ### Endpoins
 Iskills API is accessible from the internet through https.
