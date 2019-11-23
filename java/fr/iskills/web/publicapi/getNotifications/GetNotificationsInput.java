@@ -1,6 +1,6 @@
 package fr.iskills.web.publicapi.getNotifications;
 
-import fr.iskills.web.publicapi.Input;
+import fr.iskills.web.publicapi.genericModel.Input;
 
 public class GetNotificationsInput extends Input {
   private GetNotificationsInputData data;

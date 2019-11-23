@@ -1,6 +1,6 @@
 package fr.iskills.web.publicapi.getOrders;
 
-import fr.iskills.web.publicapi.Response;
+import fr.iskills.web.publicapi.genericModel.Response;
 
 import java.util.*;
 

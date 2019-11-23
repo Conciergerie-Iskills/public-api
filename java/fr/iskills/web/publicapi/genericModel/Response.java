@@ -1,4 +1,4 @@
-package fr.iskills.web.publicapi;
+package fr.iskills.web.publicapi.genericModel;
 
 
 public class Response {

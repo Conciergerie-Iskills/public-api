@@ -1,6 +1,6 @@
 package fr.iskills.web.publicapi.ackNotifications;
 
-import fr.iskills.web.publicapi.Input;
+import fr.iskills.web.publicapi.genericModel.Input;
 
 import java.util.ArrayList;
 import java.util.List;

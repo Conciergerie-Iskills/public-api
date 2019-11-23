@@ -1,6 +1,6 @@
 package fr.iskills.web.publicapi.getOrders;
 
-import fr.iskills.web.publicapi.Input;
+import fr.iskills.web.publicapi.genericModel.Input;
 
 public class GetOrdersInput extends Input {
   private GetOrdersInputData data;

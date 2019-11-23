@@ -29,6 +29,10 @@ The endpoint also requires a body which contains the following information:
     "sessionId": "50330E8C3356C130A6217A617F3D9CAFE20356C7B77C78FEE3037C48FC26AEF06D176222A38719D1"
   },
   "client": "",
+  "pageData":{
+    "firstElementIndex":0,
+    "numberOfElements":25
+  },
   "data": ...
 }
 ```
@@ -37,6 +41,9 @@ The endpoint also requires a body which contains the following information:
 * `ssoToken` Contains the clientId (provided by Iskills during setup) and the sso token from the client, which will be validated by Iskills.
 * `sessionId` A session that has been obtained through regular login.
 * `data` Body of the request, depends on the endpoint.
+* `pageData` When applicable, the page information. Optional. A default page size will be applied if this information is missing.
+  * `firstElementIndex` The offset of the first element. The first element is at the index 0.
+  * `numberOfElements` The maximum number of elements to be returned. Should be > 0.
 * `client` A string representing the client device / app calling the service. Iskills should be able to easily identify if the call comes from a browser or an app, a server or a customer device. Examples used by iskills:
   * `Iskills iOS App v1.0.2 build ef1125`
   * `Iskills Website v1.0.2 build ef1125`
@@ -50,6 +57,11 @@ When all goes well, every endpoint answers with the following informations:
   "code":2,
   "notifications":7,
   "generatedTime":1549001938335,
+  "pageInformation": {
+      "firstElementIndex": 0,
+      "numberOfElements": 5,
+      "totalNumberOfElements": 13
+  },
   "data": ...
 }
 ```
@@ -61,6 +73,10 @@ When all goes well, every endpoint answers with the following informations:
   * `10` MOVE_TO_OTHER_ROOT: Calls to this API for this user must be placed to another root.
   * `11` SSO_ERROR: Some error occured while trying to authenticate the user through SSO.
 * `notifications` Number of unread notifications for the user.
+* `pageInformation` When applicable, the page information. Only returned for endpoints that accept a `pageData` parameter.
+  * `firstElementIndex` The offset of the first element. The first element of a set is at the index 0.
+  * `numberOfElements` The number of elements returned.
+  * `totalNumberOfElements` The total number of elements in this set.
 * `generatedTime` Server timestamp for the user.
 * `data` Data returned by the endpoint.
 
@@ -74,6 +90,11 @@ If something goes wrong, every endpoint answers with status code 400 if the requ
 * `message` Will be a human readable message describing what went wrong.
 
 ## Endpoints
-* [getNotifications](docs/GET_NOTIFICATIONS.md)
-* [ackNotifications](docs/ACK_NOTIFICATIONS.md)
-* [getOrders](docs/GET_ORDERS.md)
+* Notifications :
+  * [getNotifications](docs/GET_NOTIFICATIONS.md)
+  * [ackNotifications](docs/ACK_NOTIFICATIONS.md)
+* Messaging system :
+  * [getMessageThreads](docs/GET_MESSAGE_THREADS.md)
+  * [getMessageThread](docs/GET_MESSAGE_THREAD.md)
+* Order history :
+  * [getOrders](docs/GET_ORDERS.md)

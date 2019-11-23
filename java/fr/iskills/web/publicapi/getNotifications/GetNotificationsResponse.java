@@ -1,6 +1,6 @@
 package fr.iskills.web.publicapi.getNotifications;
 
-import fr.iskills.web.publicapi.Response;
+import fr.iskills.web.publicapi.genericModel.Response;
 
 import java.util.ArrayList;
 import java.util.Date;
