@@ -1,7 +1,7 @@
 # Iskills API - endpoint "getMessageThread" - version 1
 [Back to the index](../README.md)
 
-*This API is not yet available on production systems*
+**This API is not yet available on production systems**
 
 ## Summary
 Gives back the list of messages in a message thread for the current user.

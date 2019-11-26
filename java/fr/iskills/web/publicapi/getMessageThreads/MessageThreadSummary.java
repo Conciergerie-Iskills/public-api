@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.getMessageThreads;
 
+
 import java.util.Date;
 
 public class MessageThreadSummary {
@@ -9,14 +10,16 @@ public class MessageThreadSummary {
   private int numberOfMessages;
   private int numberOfUnreadMessages;
   private String lastMessagePreview;
+  private String description;
 
-  public MessageThreadSummary(MessageThreadType type, int targetId, Date lastMessage, int numberOfMessages, int numberOfUnreadMessages, String lastMessagePreview) {
+  public MessageThreadSummary(MessageThreadType type, int targetId, Date lastMessage, int numberOfMessages, int numberOfUnreadMessages, String lastMessagePreview, String description) {
     this.type = type.name();
     this.targetId = targetId;
     this.lastMessage = lastMessage;
     this.numberOfMessages = numberOfMessages;
     this.numberOfUnreadMessages = numberOfUnreadMessages;
     this.lastMessagePreview = lastMessagePreview;
+    this.description = description;
   }
 
   public MessageThreadType getType() {
@@ -65,5 +68,13 @@ public class MessageThreadSummary {
 
   public void setLastMessagePreview(String lastMessagePreview) {
     this.lastMessagePreview = lastMessagePreview;
+  }
+
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 }

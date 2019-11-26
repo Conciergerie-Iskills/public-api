@@ -8,4 +8,5 @@ interface MessageThreadSummary {
     numberOfMessages?: number;
     numberOfUnreadMessages?: number;
     lastMessagePreview?: string;
+    description?: string;
 }

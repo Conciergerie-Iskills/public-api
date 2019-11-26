@@ -1,7 +1,7 @@
 # Iskills API - endpoint "getMessageThreads" - version 1
 [Back to the index](../README.md)
 
-*This API is not yet available on production systems*
+**This API is not yet available on production systems**
 
 ## Summary
 Gives back the list of the message threads for the current user.
@@ -23,6 +23,7 @@ Data example:
                 "lastMessagePreview": "Prestation non réalisée",
                 "numberOfMessages": 7,
                 "numberOfUnreadMessages": 1,
+                "description": "12345: Panier Bio - Les paniers de Marie"
             },
             ...
         ]
@@ -37,4 +38,5 @@ Data is made out of a single array `threads` for which each object contains:
 * `lastMessagePreview` String. A textual representation of the last message. May be partial.
 * `numberOfMessages` Number. The number of messages in the thread.
 * `numberOfUnreadMessages` Number. The number of unread messages in the thread.
+* `description` String. A short description about the topic of this thread.
 
