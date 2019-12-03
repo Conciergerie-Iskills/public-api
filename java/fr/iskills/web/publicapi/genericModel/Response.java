@@ -6,7 +6,6 @@ public class Response {
   private String message;
   @NotNull
   private int code;
-  private int notifications;
   @NotNull
   private long generatedTime;
 
@@ -30,14 +29,6 @@ public class Response {
 
   public void setCode(int code) {
     this.code = code;
-  }
-
-  public int getNotifications() {
-    return notifications;
-  }
-
-  public void setNotifications(int notifications) {
-    this.notifications = notifications;
   }
 
   public long getGeneratedTime() {

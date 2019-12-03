@@ -5,7 +5,6 @@
 interface GetOrdersResponse {
     message: string;
     code: number;
-    notifications?: number;
     generatedTime: number;
     data?: GetOrdersResponseData;
 }

@@ -55,7 +55,6 @@ When all goes well, every endpoint answers with the following informations:
 {
   "message":"Login ou mot de passe incorrect",
   "code":2,
-  "notifications":7,
   "generatedTime":1549001938335,
   "pageInformation": {
       "firstElementIndex": 0,
@@ -72,7 +71,6 @@ When all goes well, every endpoint answers with the following informations:
   * `2` INSUFFICIENT_CREDENTIALS: User is not allowed to access this data / perform this action.
   * `10` MOVE_TO_OTHER_ROOT: Calls to this API for this user must be placed to another root.
   * `11` SSO_ERROR: Some error occured while trying to authenticate the user through SSO.
-* `notifications` Number of unread notifications for the user.
 * `pageInformation` When applicable, the page information. Only returned for endpoints that accept a `pageData` parameter.
   * `firstElementIndex` The offset of the first element. The first element of a set is at the index 0.
   * `numberOfElements` The number of elements returned.
@@ -90,6 +88,8 @@ If something goes wrong, every endpoint answers with status code 400 if the requ
 * `message` Will be a human readable message describing what went wrong.
 
 ## Endpoints
+* Unread count
+  * [getBasicUserData](docs/GET_BASIC_USER_DATA.md)
 * Notifications :
   * [getNotifications](docs/GET_NOTIFICATIONS.md)
   * [ackNotifications](docs/ACK_NOTIFICATIONS.md)
