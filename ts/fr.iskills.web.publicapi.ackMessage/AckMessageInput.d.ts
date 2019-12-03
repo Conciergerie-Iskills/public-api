@@ -1,10 +1,10 @@
 /// <reference path="../fr.iskills.web.publicapi.genericModel/Auth.d.ts" />
-/// <reference path="GetOrdersInputData.d.ts" />
+/// <reference path="AckMessageInputData.d.ts" />
 
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
-interface GetOrdersInput {
+interface AckMessageInput {
     client: string;
     auth: Auth;
-    data?: GetOrdersInputData;
+    data: AckMessageInputData;
 }

@@ -3,8 +3,8 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface MessageThread {
-    elements?: MessageDetail[];
-    targetId?: number;
-    messageThreadType?: string;
-    description?: string;
+    elements: MessageDetail[];
+    targetId: number;
+    messageThreadType: string;
+    description: string;
 }

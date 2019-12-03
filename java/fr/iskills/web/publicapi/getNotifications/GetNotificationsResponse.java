@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.getNotifications;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.Response;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.List;
 
 public class GetNotificationsResponse extends Response {
 
+  @NotNull
   private List<GetNotificationsResponseNotification> data = new ArrayList<>();
 
   public GetNotificationsResponse(String message, int code) {
@@ -23,13 +25,21 @@ public class GetNotificationsResponse extends Response {
   }
 
   public static class GetNotificationsResponseNotification {
+    @NotNull
     private int id;
+    @NotNull
     private int targetId;
+    @NotNull
     private int type;
+    @NotNull
     private boolean acknowledged;
+    @NotNull
     private String message;
+    @NotNull
     private Date date;
+    @NotNull
     private String mobileWebLink;
+    @NotNull
     private String desktopWebLink;
 
     public int getId() {

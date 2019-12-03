@@ -4,7 +4,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface GetNotificationsInput {
-    client?: string;
-    auth?: Auth;
-    data?: GetNotificationsInputData;
+    client: string;
+    auth: Auth;
+    data: GetNotificationsInputData;
 }

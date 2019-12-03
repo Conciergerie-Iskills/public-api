@@ -4,10 +4,10 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface GetMessageThreadsResponse {
-    message?: string;
-    code?: number;
+    message: string;
+    code: number;
     notifications?: number;
-    generatedTime?: number;
-    pageInformation?: ResponsePage;
-    data?: GetMessageThreadsResponseData;
+    generatedTime: number;
+    pageInformation: ResponsePage;
+    data: GetMessageThreadsResponseData;
 }

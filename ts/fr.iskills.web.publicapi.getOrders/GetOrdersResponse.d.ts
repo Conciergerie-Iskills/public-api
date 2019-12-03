@@ -3,9 +3,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface GetOrdersResponse {
-    message?: string;
-    code?: number;
+    message: string;
+    code: number;
     notifications?: number;
-    generatedTime?: number;
+    generatedTime: number;
     data?: GetOrdersResponseData;
 }

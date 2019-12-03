@@ -3,9 +3,9 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface PaginatedResponse {
-    message?: string;
-    code?: number;
+    message: string;
+    code: number;
     notifications?: number;
-    generatedTime?: number;
-    pageInformation?: ResponsePage;
+    generatedTime: number;
+    pageInformation: ResponsePage;
 }

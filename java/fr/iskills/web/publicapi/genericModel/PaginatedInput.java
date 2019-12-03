@@ -1,7 +1,7 @@
 package fr.iskills.web.publicapi.genericModel;
 
-
 public class PaginatedInput extends Input {
+  @NotNull
   private InputPage pageData;
 
   public PaginatedInput(InputPage pageData) {

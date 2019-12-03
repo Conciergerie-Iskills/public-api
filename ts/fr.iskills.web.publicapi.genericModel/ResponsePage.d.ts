@@ -2,7 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface ResponsePage {
-    firstElementIndex?: number;
-    numberOfElements?: number;
-    totalNumberOfElements?: number;
+    firstElementIndex: number;
+    numberOfElements: number;
+    totalNumberOfElements: number;
 }

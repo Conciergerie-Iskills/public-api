@@ -96,5 +96,7 @@ If something goes wrong, every endpoint answers with status code 400 if the requ
 * Messaging system :
   * [getMessageThreads](docs/GET_MESSAGE_THREADS.md)
   * [getMessageThread](docs/GET_MESSAGE_THREAD.md)
+  * [postMessage](docs/POST_MESSAGE.md)
+  * [ackMessage](docs/ACK_MESSAGE.md)
 * Order history :
   * [getOrders](docs/GET_ORDERS.md)

@@ -1,8 +1,9 @@
 package fr.iskills.web.publicapi.genericModel;
 
-
 public class Input {
+  @NotNull
   private String client;
+  @NotNull
   private Auth auth;
 
   public String getClient() {

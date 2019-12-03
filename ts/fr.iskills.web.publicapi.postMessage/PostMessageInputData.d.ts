@@ -1,7 +1,8 @@
 
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
-interface GetMessageThreadInputData {
+interface PostMessageInputData {
     targetId: number;
     messageThreadType: string;
+    messageBody: string;
 }

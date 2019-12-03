@@ -2,9 +2,12 @@ package fr.iskills.web.publicapi.genericModel;
 
 
 public class Response {
+  @NotNull
   private String message;
+  @NotNull
   private int code;
   private int notifications;
+  @NotNull
   private long generatedTime;
 
   public Response(String message, int code) {

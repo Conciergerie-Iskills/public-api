@@ -1,9 +1,11 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.ResponsePage;
 import fr.iskills.web.publicapi.genericModel.PaginatedResponse;
 
 public class GetMessageThreadResponse extends PaginatedResponse {
+  @NotNull
   private MessageThread data;
 
   public GetMessageThreadResponse(String message, int code, ResponsePage pageInformation, MessageThread data) {

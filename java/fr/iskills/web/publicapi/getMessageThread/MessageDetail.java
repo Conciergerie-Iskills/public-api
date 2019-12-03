@@ -1,14 +1,21 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.Date;
 
 public class MessageDetail {
+  @NotNull
   private int id;
+  @NotNull
   private String content;
+  @NotNull
   private Date date;
+  @NotNull
   private boolean fromCurrentUser;
+  @NotNull
   private String fromUserDescription;
+  @NotNull
   private boolean acknowledged;
 
   public MessageDetail(int id, String content, Date date, boolean fromCurrentUser, String fromUserDescription, boolean acknowledged) {

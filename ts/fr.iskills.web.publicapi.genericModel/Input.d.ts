@@ -3,6 +3,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface Input {
-    client?: string;
-    auth?: Auth;
+    client: string;
+    auth: Auth;
 }

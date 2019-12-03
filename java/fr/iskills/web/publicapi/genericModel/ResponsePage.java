@@ -1,9 +1,11 @@
 package fr.iskills.web.publicapi.genericModel;
 
-
 public class ResponsePage {
+  @NotNull
   private int firstElementIndex;
+  @NotNull
   private int numberOfElements;
+  @NotNull
   private int totalNumberOfElements;
 
   public ResponsePage(int firstElementIndex, int numberOfElements, int totalNumberOfElements) {

@@ -1,8 +1,9 @@
 package fr.iskills.web.publicapi.genericModel;
 
-
 public class InputPage {
+  @NotNull
   private int firstElementIndex;
+  @NotNull
   private int numberOfElements;
 
   public InputPage(int firstElementIndex, int numberOfElements) {

@@ -1,7 +1,8 @@
 
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
-interface GetMessageThreadInputData {
+interface AckMessageInputData {
+    messageIds: number[];
     targetId: number;
     messageThreadType: string;
 }

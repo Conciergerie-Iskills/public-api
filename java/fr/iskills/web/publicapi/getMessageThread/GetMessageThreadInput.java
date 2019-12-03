@@ -1,9 +1,11 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.InputPage;
 import fr.iskills.web.publicapi.genericModel.PaginatedInput;
 
 public class GetMessageThreadInput extends PaginatedInput {
+  @NotNull
   private GetMessageThreadInputData data;
 
   public GetMessageThreadInput(InputPage pageData, GetMessageThreadInputData data) {
@@ -20,7 +22,9 @@ public class GetMessageThreadInput extends PaginatedInput {
   }
 
   public static class GetMessageThreadInputData {
+    @NotNull
     private int targetId;
+    @NotNull
     private String messageThreadType;
 
     public GetMessageThreadInputData(int targetId, String messageThreadType) {

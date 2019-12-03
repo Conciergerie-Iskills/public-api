@@ -1,15 +1,23 @@
 package fr.iskills.web.publicapi.getMessageThreads;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.Date;
 
 public class MessageThreadSummary {
+  @NotNull
   private String type;
+  @NotNull
   private int targetId;
+  @NotNull
   private Date lastMessage;
+  @NotNull
   private int numberOfMessages;
+  @NotNull
   private int numberOfUnreadMessages;
+  @NotNull
   private String lastMessagePreview;
+  @NotNull
   private String description;
 
   public MessageThreadSummary(MessageThreadType type, int targetId, Date lastMessage, int numberOfMessages, int numberOfUnreadMessages, String lastMessagePreview, String description) {

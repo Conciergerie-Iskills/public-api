@@ -3,5 +3,5 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface GetMessageThreadsResponseData {
-    threads?: MessageThreadSummary[];
+    threads: MessageThreadSummary[];
 }

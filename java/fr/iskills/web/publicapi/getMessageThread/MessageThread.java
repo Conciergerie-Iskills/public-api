@@ -1,13 +1,18 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MessageThread {
+  @NotNull
   private List<MessageDetail> elements = new ArrayList<>();
+  @NotNull
   private int targetId;
+  @NotNull
   private String messageThreadType;
+  @NotNull
   private String description;
 
   public MessageThread(int targetId, String messageThreadType, String description) {

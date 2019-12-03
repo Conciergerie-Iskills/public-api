@@ -4,7 +4,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
 interface PaginatedInput {
-    client?: string;
-    auth?: Auth;
-    pageData?: InputPage;
+    client: string;
+    auth: Auth;
+    pageData: InputPage;
 }

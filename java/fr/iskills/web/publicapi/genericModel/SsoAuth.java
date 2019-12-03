@@ -1,8 +1,9 @@
 package fr.iskills.web.publicapi.genericModel;
 
-
 public class SsoAuth {
+  @NotNull
   private String clientId;
+  @NotNull
   private String ssoToken;
 
   public String getClientId() {
