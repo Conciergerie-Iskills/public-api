@@ -22,4 +22,4 @@ Allows a user agent to mark a series of messages as being "read".
 * `messageIds` number[]. The id of the messages to be marked as "read" as provided by the [getMessageThread api](GET_MESSAGE_THREAD.md)
   
 # Response
-The response doesn't contain anything. A code of 0 means success.
+The response is the same as the [getBasicUserData](GET_BASIC_USER_DATA.md).

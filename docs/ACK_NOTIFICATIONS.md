@@ -13,5 +13,5 @@ Mark specific notifications as "read".
 * `notificationIds` A list of notification IDs that has to be marked as read. These IDs are those provided by [getNotifications](GET_NOTIFICATIONS.md).
 
 ## Response
-No data is included in the response. A `code` 0 indicates the operation completed successfully.
+The response is the same as the [getBasicUserData](GET_BASIC_USER_DATA.md).
 
