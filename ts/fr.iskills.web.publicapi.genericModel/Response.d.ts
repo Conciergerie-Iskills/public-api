@@ -4,5 +4,6 @@
 interface Response {
     message: string;
     code: number;
+    notifications?: number;
     generatedTime: number;
 }

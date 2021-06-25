@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.getMessageThreads;
 
+import fr.iskills.web.publicapi.LLabel;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.Date;
@@ -18,16 +19,19 @@ public class MessageThreadSummary {
   @NotNull
   private String lastMessagePreview;
   @NotNull
+  private LLabel descriptionLabel;
+  @Deprecated
   private String description;
 
-  public MessageThreadSummary(MessageThreadType type, int targetId, Date lastMessage, int numberOfMessages, int numberOfUnreadMessages, String lastMessagePreview, String description) {
+  public MessageThreadSummary(MessageThreadType type, int targetId, Date lastMessage, int numberOfMessages, int numberOfUnreadMessages, String lastMessagePreview, LLabel description) {
     this.type = type.name();
     this.targetId = targetId;
     this.lastMessage = lastMessage;
     this.numberOfMessages = numberOfMessages;
     this.numberOfUnreadMessages = numberOfUnreadMessages;
     this.lastMessagePreview = lastMessagePreview;
-    this.description = description;
+    this.descriptionLabel = description;
+    this.description = descriptionLabel.getFr();
   }
 
   public MessageThreadType getType() {

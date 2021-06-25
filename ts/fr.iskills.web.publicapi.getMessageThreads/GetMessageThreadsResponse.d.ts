@@ -6,6 +6,7 @@
 interface GetMessageThreadsResponse {
     message: string;
     code: number;
+    notifications?: number;
     generatedTime: number;
     pageInformation: ResponsePage;
     data: GetMessageThreadsResponseData;

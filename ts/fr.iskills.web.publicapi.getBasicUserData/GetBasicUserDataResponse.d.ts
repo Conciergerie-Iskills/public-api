@@ -5,6 +5,7 @@
 interface GetBasicUserDataResponse {
     message: string;
     code: number;
+    notifications?: number;
     generatedTime: number;
     data: BasicUserData;
 }

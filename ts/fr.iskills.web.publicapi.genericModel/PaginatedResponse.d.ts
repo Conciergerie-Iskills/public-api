@@ -5,6 +5,7 @@
 interface PaginatedResponse {
     message: string;
     code: number;
+    notifications?: number;
     generatedTime: number;
     pageInformation: ResponsePage;
 }

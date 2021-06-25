@@ -5,6 +5,7 @@
 interface GetNotificationsResponse {
     message: string;
     code: number;
+    notifications?: number;
     generatedTime: number;
     data: GetNotificationsResponseNotification[];
 }

@@ -2,10 +2,13 @@ package fr.iskills.web.publicapi.genericModel;
 
 
 public class Response {
+
+
   @NotNull
   private String message;
   @NotNull
   private int code;
+  private int notifications;
   @NotNull
   private long generatedTime;
 
@@ -37,5 +40,13 @@ public class Response {
 
   public void setGeneratedTime(long generatedTime) {
     this.generatedTime = generatedTime;
+  }
+
+  public int getNotifications() {
+    return notifications;
+  }
+
+  public void setNotifications(int notifications) {
+    this.notifications = notifications;
   }
 }

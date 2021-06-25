@@ -4,4 +4,7 @@
 interface BasicUserData {
     nbUnreadAlerts: number;
     nbUnreadMessages: number;
+    alertsStatus: string;
+    messagesStatus: string;
+    canChooseLanguage: boolean;
 }

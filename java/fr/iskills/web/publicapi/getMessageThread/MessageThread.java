@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.LLabel;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.ArrayList;
@@ -12,13 +13,16 @@ public class MessageThread {
   private int targetId;
   @NotNull
   private String messageThreadType;
-  @NotNull
+  @Deprecated
   private String description;
+  @NotNull
+  private LLabel descriptionLabel;
 
-  public MessageThread(int targetId, String messageThreadType, String description) {
+  public MessageThread(int targetId, String messageThreadType, LLabel description) {
     this.targetId = targetId;
     this.messageThreadType = messageThreadType;
-    this.description = description;
+    this.description = description.getFr();
+    this.descriptionLabel = description;
   }
 
   public void addMessage(MessageDetail msg) {
