@@ -1,9 +1,11 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.InputPage;
 import fr.iskills.web.publicapi.genericModel.PaginatedInput;
 
+@JavaScriptType
 public class GetMessageThreadInput extends PaginatedInput {
   @NotNull
   private GetMessageThreadInputData data;

@@ -1,7 +1,5 @@
-# Iskills API - endpoint "ackMessage" - version 1
+# ARMONIA Conciergerie API - endpoint "ackMessage" - version 1
 [Back to the index](../README.md)
-
-**This API is not yet available on production systems**
 
 ## Summary
 Allows a user agent to mark a series of messages as being "read".

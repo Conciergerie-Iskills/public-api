@@ -1,11 +1,13 @@
 package fr.iskills.web.publicapi.ackNotifications;
 
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.Input;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JavaScriptType
 public class AckNotificationsInput extends Input {
   @NotNull
   private AckNotificationsInputData data = new AckNotificationsInputData();
@@ -16,13 +18,22 @@ public class AckNotificationsInput extends Input {
 
   public static class AckNotificationsInputData {
     @NotNull
-    private List<Integer> notificationIds = new ArrayList<>();
-    public void add(Integer i) {
+    private List<Long> notificationIds = new ArrayList<>();
+    private boolean unread;
+    public void add(Long i) {
       notificationIds.add(i);
     }
 
-    public List<Integer> getNotificationIds() {
+    public List<Long> getNotificationIds() {
       return notificationIds;
+    }
+
+    public boolean isUnread() {
+      return unread;
+    }
+
+    public void setUnread(boolean unread) {
+      this.unread = unread;
     }
   }
 }

@@ -1,7 +1,5 @@
-# Iskills API - endpoint "getMessageThread" - version 1
+# ARMONIA Conciergerie API - endpoint "getMessageThread" - version 1
 [Back to the index](../README.md)
-
-**This API is not yet available on production systems**
 
 ## Summary
 Gives back the list of messages in a message thread for the current user.
@@ -31,7 +29,7 @@ Data example:
         "content": "Nous vous informons que votre commande est disponible à la conciergerie.",
         "date": "30/11/2019 12:41",
         "fromCurrentUser": false,
-        "fromUserDescription": "Iskills",
+        "fromUserDescription": "ARMONIA Conciergerie",
         "acknowledged": true
       }
     ],

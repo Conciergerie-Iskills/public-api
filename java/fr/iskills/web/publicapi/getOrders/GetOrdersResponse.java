@@ -1,10 +1,10 @@
 package fr.iskills.web.publicapi.getOrders;
 
-import fr.iskills.web.publicapi.genericModel.Response;
+import fr.iskills.web.publicapi.genericModel.GenericPublicApiResponse;
 
 import java.util.*;
 
-public class GetOrdersResponse extends Response {
+public class GetOrdersResponse extends GenericPublicApiResponse {
   private GetOrdersResponseData data = new GetOrdersResponseData();
 
   public GetOrdersResponse(String message, int code) {

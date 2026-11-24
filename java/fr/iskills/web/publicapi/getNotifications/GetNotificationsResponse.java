@@ -1,13 +1,13 @@
 package fr.iskills.web.publicapi.getNotifications;
 
 import fr.iskills.web.publicapi.genericModel.NotNull;
-import fr.iskills.web.publicapi.genericModel.Response;
+import fr.iskills.web.publicapi.genericModel.GenericPublicApiResponse;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class GetNotificationsResponse extends Response {
+public class GetNotificationsResponse extends GenericPublicApiResponse {
 
   @NotNull
   private List<GetNotificationsResponseNotification> data = new ArrayList<>();
@@ -26,9 +26,9 @@ public class GetNotificationsResponse extends Response {
 
   public static class GetNotificationsResponseNotification {
     @NotNull
-    private int id;
+    private long id;
     @NotNull
-    private int targetId;
+    private long targetId;
     @NotNull
     private int type;
     @NotNull
@@ -42,19 +42,19 @@ public class GetNotificationsResponse extends Response {
     @NotNull
     private String desktopWebLink;
 
-    public int getId() {
+    public long getId() {
       return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
       this.id = id;
     }
 
-    public int getTargetId() {
+    public long getTargetId() {
       return targetId;
     }
 
-    public void setTargetId(int targetId) {
+    public void setTargetId(long targetId) {
       this.targetId = targetId;
     }
 

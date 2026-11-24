@@ -1,10 +1,12 @@
 package fr.iskills.web.publicapi.getMessageThreads;
 
 import fr.iskills.web.publicapi.LLabel;
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.Date;
 
+@JavaScriptType
 public class MessageThreadSummary {
   @NotNull
   private String type;

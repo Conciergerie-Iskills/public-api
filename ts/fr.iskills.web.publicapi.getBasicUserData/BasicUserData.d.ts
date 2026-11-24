@@ -1,3 +1,4 @@
+/// <reference path="GameInfo.d.ts" />
 
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
@@ -6,5 +7,6 @@ interface BasicUserData {
     nbUnreadMessages: number;
     alertsStatus: string;
     messagesStatus: string;
-    canChooseLanguage: boolean;
+    serverVersion?: string;
+    currentGame?: GameInfo;
 }

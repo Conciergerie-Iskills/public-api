@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.genericModel;
 
+@JavaScriptType
 public class InputPage {
   @NotNull
   private int firstElementIndex;

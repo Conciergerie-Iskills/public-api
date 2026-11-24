@@ -1,7 +1,7 @@
 package fr.iskills.web.publicapi.postMessage;
 
-import fr.iskills.web.publicapi.genericModel.Input;
 import fr.iskills.web.publicapi.genericModel.InputPage;
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.PaginatedInput;
 import fr.iskills.web.publicapi.getMessageThreads.MessageThreadType;
@@ -22,6 +22,7 @@ public class PostMessageInput extends PaginatedInput {
     this.data = data;
   }
 
+  @JavaScriptType
   public static class PostMessageInputData {
     @NotNull
     private int targetId;

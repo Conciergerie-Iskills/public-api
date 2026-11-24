@@ -1,7 +1,7 @@
 
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
-interface Response {
+interface GenericPublicApiResponse {
     message: string;
     code: number;
     notifications?: number;

@@ -3,4 +3,5 @@
 
 interface AckNotificationsInputData {
     notificationIds: number[];
+    unread?: boolean;
 }

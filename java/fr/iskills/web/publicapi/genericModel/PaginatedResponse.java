@@ -1,6 +1,7 @@
 package fr.iskills.web.publicapi.genericModel;
 
-public class PaginatedResponse extends Response {
+@JavaScriptType
+public class PaginatedResponse extends GenericPublicApiResponse {
   @NotNull
   private ResponsePage pageInformation;
 

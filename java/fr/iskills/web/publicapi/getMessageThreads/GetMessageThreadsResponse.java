@@ -1,5 +1,6 @@
 package fr.iskills.web.publicapi.getMessageThreads;
 
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.genericModel.ResponsePage;
 import fr.iskills.web.publicapi.genericModel.PaginatedResponse;
@@ -7,6 +8,8 @@ import fr.iskills.web.publicapi.genericModel.PaginatedResponse;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@JavaScriptType
 public class GetMessageThreadsResponse extends PaginatedResponse {
   @NotNull
   private GetMessageThreadsResponseData data;

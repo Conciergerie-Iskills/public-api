@@ -1,4 +1,4 @@
-# Iskills API - endpoint "getNotifications" - version 1
+# ARMONIA Conciergerie API - endpoint "getNotifications" - version 1
 [Back to the index](../README.md)
 
 ## Summary
@@ -24,8 +24,8 @@ Data example:
         "acknowledged": false,
         "message": "Votre commande 174954 est disponible.",
         "date": "09/08/2019 17:50",
-        "mobileWebLink": "http://dev.iskills.fr/webapp/?/orderDetail/174954",
-        "desktopWebLink": "http://dev.iskills.fr/profil/?od=174954"
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/174954",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=174954"
     },
     {
         "id": 1851,
@@ -34,8 +34,8 @@ Data example:
         "acknowledged": false,
         "message": "Nouveau commentaire: Petite retouche nécéssaire sur votre manteau. Merci de revenir vers nous.",
         "date": "09/08/2019 18:29",
-        "mobileWebLink": "http://dev.iskills.fr/webapp/?/orderDetail/174954",
-        "desktopWebLink": "http://dev.iskills.fr/profil/?od=174954"
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/174954",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=174954"
     }
   ]
 }

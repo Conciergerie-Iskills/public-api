@@ -1,7 +1,9 @@
 package fr.iskills.web.publicapi.getBasicUserData;
 
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 
+@JavaScriptType
 public class BasicUserData {
     @NotNull
     private int nbUnreadAlerts;
@@ -11,15 +13,15 @@ public class BasicUserData {
     private String alertsStatus;
     @NotNull
     private String messagesStatus;
-    @NotNull
-    private boolean canChooseLanguage;
+    private String serverVersion;
+    private GameInfo currentGame;
 
-    public BasicUserData(int nbUnreadAlerts, int nbUnreadMessages, String alertsStatus, String messagesStatus, boolean canChooseLanguage) {
+    public BasicUserData(int nbUnreadAlerts, int nbUnreadMessages, String alertsStatus, String messagesStatus, String serverVersion) {
         this.nbUnreadAlerts = nbUnreadAlerts;
         this.nbUnreadMessages = nbUnreadMessages;
         this.alertsStatus = alertsStatus;
         this.messagesStatus = messagesStatus;
-        this.canChooseLanguage = canChooseLanguage;
+        this.serverVersion = serverVersion;
     }
 
     public int getNbUnreadAlerts() {
@@ -54,11 +56,20 @@ public class BasicUserData {
         this.messagesStatus = messagesStatus;
     }
 
-    public boolean isCanChooseLanguage() {
-        return canChooseLanguage;
+    public String getServerVersion() {
+        return serverVersion;
     }
 
-    public void setCanChooseLanguage(boolean canChooseLanguage) {
-        this.canChooseLanguage = canChooseLanguage;
+    public void setServerVersion(String serverVersion) {
+        this.serverVersion = serverVersion;
+    }
+
+    public GameInfo getCurrentGame() {
+        return currentGame;
+    }
+
+    public void setCurrentGame(GameInfo currentGame) {
+        this.currentGame = currentGame;
     }
 }
+

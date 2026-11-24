@@ -1,12 +1,11 @@
 package fr.iskills.web.publicapi.getBasicUserData;
 
 import fr.iskills.web.publicapi.genericModel.NotNull;
-import fr.iskills.web.publicapi.genericModel.Response;
+import fr.iskills.web.publicapi.genericModel.GenericPublicApiResponse;
 
-public class GetBasicUserDataResponse extends Response {
+public class GetBasicUserDataResponse extends GenericPublicApiResponse {
     @NotNull
     private BasicUserData data;
-
     public GetBasicUserDataResponse(String message, int code, BasicUserData data) {
         super(message, code);
         this.data = data;

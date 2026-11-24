@@ -1,7 +1,5 @@
-# Iskills API - endpoint "getMessageThreads" - version 1
+# ARMONIA Conciergerie API - endpoint "getMessageThreads" - version 1
 [Back to the index](../README.md)
-
-**This API is not yet available on production systems**
 
 ## Summary
 Gives back the list of the message threads for the current user.

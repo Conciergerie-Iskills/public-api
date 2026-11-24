@@ -1,4 +1,4 @@
-# Iskills API - endpoint "getOrders" - version 1
+# ARMONIA Conciergerie API - endpoint "getOrders" - version 1
 [Back to the index](../README.md)
 
 # Summary
@@ -23,9 +23,9 @@ Data example:
         "id": 158058,
         "offreName": "Pressing - nettoyage à sec - Classique",
         "status": "Effectuée",
-        "icon": "https://iskills.fr/site/web/bright/images/aplat/rouge-cintre.png",
-        "mobileWebLink": "https://iskills.fr/webapp/?/orderDetail/158058",
-        "desktopWebLink": "https://iskills.fr/profil/?od=158058",
+        "icon": "https://conciergerie.armonia.team/images/aplat/rouge-cintre.png",
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/158058",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=158058",
         "items": [
           "Chemise homme lavée, repassée sur cintre"
         ]
@@ -35,9 +35,9 @@ Data example:
         "id": 158040,
         "offreName": "Ménage et Repassage",
         "status": "Enregistrée",
-        "icon": "https://iskills.fr/site/web/bright/images/aplat/vert-nettoyage.png",
-        "mobileWebLink": "https://iskills.fr/webapp/?/orderDetail/158040",
-        "desktopWebLink": "https://iskills.fr/profil/?od=158040",
+        "icon": "https://conciergerie.armonia.team/images/aplat/vert-nettoyage.png",
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/158040",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=158040",
         "items": [
           "Ménage & Repassage (*)"
         ]
@@ -49,9 +49,9 @@ Data example:
         "id": 158039,
         "offreName": "Cordonnerie pour femme - Classique",
         "status": "Terminée",
-        "icon": "https://iskills.fr/site/web/bright/images/aplat/rouge-chaussures.png",
-        "mobileWebLink": "https://iskills.fr/webapp/?/orderDetail/158039",
-        "desktopWebLink": "https://iskills.fr/profil/?od=158039",
+        "icon": "https://conciergerie.armonia.team/images/aplat/rouge-chaussures.png",
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/158039",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=158039",
         "items": [
             "Talons moyens (cuir)"
         ]
@@ -61,9 +61,9 @@ Data example:
         "id": 114547,
         "offreName": "La sélection de cadeaux",
         "status": "Terminée",
-        "icon": "https://iskills.fr/site/web/bright/images/aplat/rouge-cadeau.png",
-        "mobileWebLink": "https://iskills.fr/webapp/?/orderDetail/114547",
-        "desktopWebLink": "https://iskills.fr/profil/?od=114547",
+        "icon": "https://conciergerie.armonia.team/images/aplat/rouge-cadeau.png",
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/114547",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=114547",
         "items": [
             "Infuseur Buddy menthe"
         ]
@@ -73,9 +73,9 @@ Data example:
         "id": 2322,
         "offreName": "PRESSING NETTOYAGE A SEC",
         "status": "Terminée",
-        "icon": "https://iskills.fr/site/web/bright/images/aplat/rouge-cintre.png",
-        "mobileWebLink": "https://iskills.fr/webapp/?/orderDetail/2322",
-        "desktopWebLink": "https://iskills.fr/profil/?od=2322",
+        "icon": "https://conciergerie.armonia.team/images/aplat/rouge-cintre.png",
+        "mobileWebLink": "https://conciergerie.armonia.team/webapp/?/orderDetail/2322",
+        "desktopWebLink": "https://conciergerie.armonia.team/profil/?od=2322",
         "items": [
             "Pantalon",
             "Veste"

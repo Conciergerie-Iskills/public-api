@@ -1,11 +1,13 @@
 package fr.iskills.web.publicapi.getMessageThread;
 
 import fr.iskills.web.publicapi.LLabel;
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@JavaScriptType
 public class MessageThread {
   @NotNull
   private List<MessageDetail> elements = new ArrayList<>();

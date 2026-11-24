@@ -1,6 +1,7 @@
 package fr.iskills.web.publicapi.ackMessage;
 
 import fr.iskills.web.publicapi.genericModel.Input;
+import fr.iskills.web.publicapi.genericModel.JavaScriptType;
 import fr.iskills.web.publicapi.genericModel.NotNull;
 import fr.iskills.web.publicapi.getMessageThreads.MessageThreadType;
 
@@ -15,6 +16,7 @@ public class AckMessageInput extends Input {
         return data;
     }
 
+    @JavaScriptType
     public static class AckMessageInputData {
         @NotNull
         private List<Integer> messageIds = new ArrayList<>();

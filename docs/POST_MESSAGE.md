@@ -1,7 +1,5 @@
-# Iskills API - endpoint "postMessage" - version 1
+# ARMONIA Conciergerie API - endpoint "postMessage" - version 1
 [Back to the index](../README.md)
-
-**This API is not yet available on production systems**
 
 ## Summary
 Post a message in a message thread. Gives back the list of messages in the message thread for the current user.
@@ -33,7 +31,7 @@ Data example:
         "content": "Nous vous informons que votre commande est disponible à la conciergerie.",
         "date": "30/11/2019 12:41",
         "fromCurrentUser": false,
-        "fromUserDescription": "Iskills",
+        "fromUserDescription": "ARMONIA Conciergerie",
         "acknowledged": true
       }
     ],

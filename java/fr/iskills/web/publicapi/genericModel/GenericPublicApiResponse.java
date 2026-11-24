@@ -1,7 +1,8 @@
 package fr.iskills.web.publicapi.genericModel;
 
 
-public class Response {
+@ExcludeFromTypeScriptGeneration
+public class GenericPublicApiResponse {
 
 
   @NotNull
@@ -12,7 +13,7 @@ public class Response {
   @NotNull
   private long generatedTime;
 
-  public Response(String message, int code) {
+  public GenericPublicApiResponse(String message, int code) {
     this.message = message;
     this.code = code;
     generatedTime = System.currentTimeMillis();

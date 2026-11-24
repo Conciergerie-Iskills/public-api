@@ -1,6 +1,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 
-enum MessageThreadType {
+export enum MessageThreadType {
     ORDER_COMMENT
 }
 

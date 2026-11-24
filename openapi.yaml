@@ -1,0 +1,220 @@
+openapi: 3.0.3
+info:
+  title: ARMONIA Conciergerie Public API – app integration
+  version: 1.0.0
+  description: |
+    Endpoints used to integrate the conciergerie into a client application:
+    unread badge and notifications. Every call is a POST with a JSON body.
+    The version of each endpoint is the last segment of its path.
+    See README.md for authentication, response codes and the SAML WebView integration.
+servers:
+  - url: https://conciergerie.armonia.team/api
+paths:
+  /getBasicUserData/1:
+    post:
+      summary: Unread notifications and messages count
+      operationId: getBasicUserData
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Input'
+      responses:
+        '200':
+          description: See `code` in the body for the outcome.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/GenericResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/BasicUserData'
+        '400':
+          $ref: '#/components/responses/Error'
+        '500':
+          $ref: '#/components/responses/Error'
+  /getNotifications/1:
+    post:
+      summary: List the current user's notifications
+      operationId: getNotifications
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/Input'
+                - type: object
+                  properties:
+                    data:
+                      type: object
+                      properties:
+                        includeAcked:
+                          type: boolean
+                          description: If true, read notifications are returned too.
+      responses:
+        '200':
+          description: See `code` in the body for the outcome.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/GenericResponse'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Notification'
+        '400':
+          $ref: '#/components/responses/Error'
+        '500':
+          $ref: '#/components/responses/Error'
+  /ackNotifications/1:
+    post:
+      summary: Mark notifications as read (or unread)
+      operationId: ackNotifications
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/Input'
+                - type: object
+                  properties:
+                    data:
+                      type: object
+                      required: [notificationIds]
+                      properties:
+                        notificationIds:
+                          type: array
+                          items:
+                            type: integer
+                        unread:
+                          type: boolean
+                          default: false
+                          description: If true, the notifications are marked as unread.
+      responses:
+        '200':
+          description: Same body as getBasicUserData.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/GenericResponse'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/BasicUserData'
+        '400':
+          $ref: '#/components/responses/Error'
+        '500':
+          $ref: '#/components/responses/Error'
+components:
+  schemas:
+    Input:
+      type: object
+      required: [auth]
+      properties:
+        client:
+          type: string
+          description: Identifies the calling app and version.
+          example: Acme Intranet App iOS v1.0.2 build ef1125
+        auth:
+          $ref: '#/components/schemas/Auth'
+    Auth:
+      type: object
+      description: Use either `ssoToken` or `sessionId`, not both.
+      properties:
+        ssoToken:
+          type: object
+          properties:
+            clientId:
+              type: string
+              description: Provided by ARMONIA during setup.
+            ssoToken:
+              type: string
+              description: Token issued by the client's identity provider, validated by ARMONIA.
+        sessionId:
+          type: string
+          description: Session obtained through regular login.
+    GenericResponse:
+      type: object
+      required: [message, code, generatedTime]
+      properties:
+        message:
+          type: string
+          description: Human-readable message.
+        code:
+          type: integer
+          description: |
+            0 OK, 1 INVALID_SESSSION (authenticate again), 2 INSUFFICIENT_CREDENTIALS,
+            10 MOVE_TO_OTHER_ROOT, 11 SSO_ERROR.
+          enum: [0, 1, 2, 10, 11]
+        notifications:
+          type: integer
+        generatedTime:
+          type: integer
+          format: int64
+          description: Server timestamp (ms).
+    BasicUserData:
+      type: object
+      required: [nbUnreadAlerts, nbUnreadMessages, alertsStatus, messagesStatus]
+      properties:
+        nbUnreadAlerts:
+          type: integer
+          description: Number of unread notifications.
+        nbUnreadMessages:
+          type: integer
+          description: Number of unread messages.
+        alertsStatus:
+          type: string
+          description: Opaque value that changes when notifications change ("nothing" if none).
+        messagesStatus:
+          type: string
+          description: Opaque value that changes when messages change ("nothing" if none).
+        serverVersion:
+          type: string
+        currentGame:
+          type: object
+          description: Used by the ARMONIA apps only; integrators can ignore it.
+    Notification:
+      type: object
+      required: [id, targetId, type, acknowledged, message, date, mobileWebLink, desktopWebLink]
+      properties:
+        id:
+          type: integer
+        targetId:
+          type: integer
+          description: Target object, usually an order.
+        type:
+          type: integer
+          description: 3 new comment or bill on an order, 4 order ready to be collected; 1 and 2 are internal.
+        acknowledged:
+          type: boolean
+        message:
+          type: string
+          description: Text to display to the user.
+        date:
+          type: string
+          example: 09/08/2019 17:50
+        mobileWebLink:
+          type: string
+          description: URL to open in a WebView or a mobile browser.
+        desktopWebLink:
+          type: string
+          description: URL to open in a desktop browser.
+  responses:
+    Error:
+      description: Incorrect request (400) or server error (500).
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
